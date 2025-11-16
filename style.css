@@ -42,6 +42,7 @@ body{
 .chips{display:flex; gap:8px; list-style:none; padding:0; margin:8px 0}
 .chips li{background:var(--muted); padding:8px 12px; border-radius:999px}
 
+<<<<<<< HEAD
 /* Footer */
 .footer{padding:18px 0; border-top:1px solid rgba(0,0,0,0.06); margin-top:40px}
 
@@ -51,4 +52,10 @@ body{
   .nav-links{position:fixed; inset:auto 0 0 0; transform:translateY(100%); background:var(--bg); flex-direction:column; padding:12px; transition:transform .18s}
   .nav-links.show{transform:translateY(0)}
   .menu{display:block}
+=======
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 10px;
+>>>>>>> parent of 24c468f (Resume and Style changes)
 }
