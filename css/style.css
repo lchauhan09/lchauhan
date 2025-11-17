@@ -75,24 +75,19 @@ nav ul li a.resume-btn:hover {
   background: #e68900;   /* darker orange on hover */
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #1a1a2e;
-  color: #fff;
+.footer-links {
+  margin-top: 10px;
 }
 
-footer a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 5px;
+.footer-links a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 20px;       /* icon size */
+  color: #fff;           /* white icons */
+  transition: color 0.3s;
 }
 
-footer a:hover {
-  color: #ff9800;
-
+.footer-links a:hover {
+  color: #ff9800;        /* orange accent on hover */
 }
 
-footer i {
-  margin-right: 5px;
-}
