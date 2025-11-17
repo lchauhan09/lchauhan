@@ -31,8 +31,14 @@ nav ul li a {
 #intro h2 {
   text-align: center;
 }
+
 #intro p {
   text-align: left;
+}
+
+.btn-center {
+  text-align: center;
+  margin-top: 20px;
 }
 
 section {
