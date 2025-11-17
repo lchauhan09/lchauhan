@@ -58,6 +58,11 @@ section {
   border-radius: 5px;
 }
 
+nav ul li a[href="Lokesh Chauhan.pdf"] {
+  font-weight: bold;
+  color: #ff9800; /* orange accent */
+}
+
 footer {
   text-align: center;
   padding: 10px;
