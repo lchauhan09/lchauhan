@@ -82,16 +82,13 @@ nav ul li a.resume-btn:hover {
 
 /* Optional: override the iframe container if needed */
 iframe[src*="chatling.ai"] {
-  width: 300px !important;
-  height: 400px !important;
-  font-size: 13px !important;
-  line-height: 1.3 !important;
-  max-height: 90vh;
-  border-radius: 10px;
+  zoom: 0.85 !important;
+  transform: scale(0.85);
+  transform-origin: bottom right;
 }
 
 .chtl-widget {
-  font-size: 7px !important;
+  font-size: 14px !important;
   padding: 10px !important;
 }
 
