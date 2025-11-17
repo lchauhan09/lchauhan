@@ -28,6 +28,13 @@ nav ul li a {
   text-decoration: none;
 }
 
+#intro h2 {
+  text-align: center;
+}
+#intro p {
+  text-align: left;
+}
+
 section {
   padding: 20px;
   margin: 20px auto;
