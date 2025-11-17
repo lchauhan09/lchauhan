@@ -28,6 +28,31 @@ nav ul li a {
   text-decoration: none;
 }
 
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;              /* space between photo and text */
+  flex-wrap: wrap;        /* ensures responsiveness on smaller screens */
+}
+
+.intro-photo {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;     /* circular photo */
+  border: 3px solid #0077b6;
+}
+
+.intro-text {
+  flex: 2;
+  max-width: 600px;
+}
+
 #intro h2 {
   text-align: center;
 }
@@ -102,4 +127,3 @@ footer {
 .footer-links i {
   margin-right: 5px;     /* spacing between icon and text */
 }
-
