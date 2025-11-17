@@ -41,7 +41,7 @@ nav ul li a {
 
 .header-photo {
   flex: 1;
-  text-align: right; /* aligns photo to the right */
+  text-align: left; /* aligns photo to the right */
 }
 
 .profile-pic {
