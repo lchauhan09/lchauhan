@@ -4,18 +4,46 @@ title: Contact | Lokesh Chauhan
 ---
 
 <section id="contact">
-    <h2>Contact Me</h2>
-    <p>
-        <strong>Phone Number:</strong> <a href="tel:+17059776952">(705) 977-6952</a>
-    </p>
-    <p>
-        <strong>Email Address:</strong> <a href="mailto:lokesh.chauhan09@gmail.com">lokesh.chauhan09@gmail.com</a>
+    <h2>Get in Touch</h2>
+    <p style="text-align: center; margin-bottom: 30px;">
+        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
     </p>
 
-    <div class="btn-center" style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-        <a href="https://calendly.com/lokesh-chauhan09/30min" class="btn" target="_blank">Meet Me</a>
-        <a href="Lokesh_Chauhan.pdf" class="btn" target="_blank">Resume</a>
+    <div class="projects-grid">
+        <!-- Email -->
+        <a href="mailto:lokesh.chauhan09@gmail.com" class="project-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Me</h3>
+            <p>lokesh.chauhan09@gmail.com</p>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+17059776952" class="project-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Call Me</h3>
+            <p>(705) 977-6952</p>
+        </a>
+
+        <!-- Calendly -->
+        <a href="https://calendly.com/lokesh-chauhan09/30min" target="_blank" class="project-card">
+            <i class="fas fa-calendar-check"></i>
+            <h3>Book a Meeting</h3>
+            <p>Schedule a 30-min chat via Calendly</p>
+        </a>
+
+        <!-- Resume -->
+        <a href="{{ " /Lokesh_Chauhan.pdf" | relative_url }}" target="_blank" class="project-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>My Resume</h3>
+            <p>Download PDF</p>
+        </a>
+
+        <!-- Feedback -->
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6H0U6Pb505SsBXzaIL7adVoluevKHESt2JprrB7aPtz57uw/viewform"
-            class="btn" target="_blank">Feedback</a>
+            target="_blank" class="project-card">
+            <i class="fas fa-comment-dots"></i>
+            <h3>Feedback</h3>
+            <p>Share your thoughts anonymously</p>
+        </a>
     </div>
 </section>
