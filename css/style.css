@@ -255,7 +255,7 @@ a.project-card:hover h3 {
 .calendly-embed {
   flex: 1;
   min-width: 320px;
-  height: 650px;
+  height: 750px;
   /* Ensure container has height for widget */
   border-left: 1px solid #eee;
 }
