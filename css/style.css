@@ -510,7 +510,7 @@ footer {
 .experience-content {
   display: flex;
   gap: 30px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .text-content {
@@ -569,7 +569,7 @@ footer {
 .carousel-dots {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 8px;
   gap: 8px;
   align-items: center;
   /* Align dots vertically */
