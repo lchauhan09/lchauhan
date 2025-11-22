@@ -63,12 +63,14 @@ header {
 }
 
 .profile-img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 20%;
+  /* Focus on face */
   border: 4px solid var(--accent-color);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 
@@ -78,6 +80,9 @@ header {
 
 .header-text {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header-text h1 {
