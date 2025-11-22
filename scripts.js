@@ -54,26 +54,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // Carousel Logic
   const track = document.querySelector('.carousel-track');
   const slides = Array.from(track?.children || []);
-  const nextBtn = document.getElementById('nextBtn');
-  const prevBtn = document.getElementById('prevBtn');
+  const dotsContainer = document.getElementById('carouselDots');
 
-  if (track && slides.length > 0 && nextBtn && prevBtn) {
+  if (track && slides.length > 0 && dotsContainer) {
     let currentIndex = 0;
+
+    // Create dots
+    slides.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.children);
 
     function updateCarousel() {
       const slideWidth = slides[0].getBoundingClientRect().width;
       track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+      // Update dots
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentIndex].classList.add('active');
     }
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateCarousel();
-    });
-
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateCarousel();
-    });
 
     // Handle window resize
     window.addEventListener('resize', updateCarousel);
