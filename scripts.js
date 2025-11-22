@@ -55,9 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.carousel-track');
   const slides = Array.from(track?.children || []);
   const dotsContainer = document.getElementById('carouselDots');
+  const navLeft = document.getElementById('navLeft');
+  const navRight = document.getElementById('navRight');
+  const carouselContainer = document.querySelector('.carousel-container');
 
   if (track && slides.length > 0 && dotsContainer) {
     let currentIndex = 0;
+    let autoPlayInterval;
 
     // Create dots
     slides.forEach((_, index) => {
@@ -67,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       dot.addEventListener('click', () => {
         currentIndex = index;
         updateCarousel();
+        resetAutoPlay();
       });
       dotsContainer.appendChild(dot);
     });
@@ -82,7 +87,58 @@ document.addEventListener('DOMContentLoaded', () => {
       dots[currentIndex].classList.add('active');
     }
 
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }
+
+    // Invisible Navigation
+    if (navLeft) {
+      navLeft.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+      });
+    }
+
+    if (navRight) {
+      navRight.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+      });
+    }
+
+    // Auto-play Logic
+    function startAutoPlay() {
+      stopAutoPlay(); // Ensure no duplicate intervals
+      autoPlayInterval = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayInterval) {
+        clearInterval(autoPlayInterval);
+      }
+    }
+
+    function resetAutoPlay() {
+      stopAutoPlay();
+      startAutoPlay();
+    }
+
+    // Pause on hover
+    if (carouselContainer) {
+      carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+      carouselContainer.addEventListener('mouseleave', startAutoPlay);
+    }
+
     // Handle window resize
     window.addEventListener('resize', updateCarousel);
+
+    // Start auto-play initially
+    startAutoPlay();
   }
 });

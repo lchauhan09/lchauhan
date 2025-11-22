@@ -527,8 +527,7 @@ footer {
   width: 100%;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 10px var(--card-shadow);
-  background: var(--card-bg);
+  /* Removed box-shadow and background for cleaner look */
 }
 
 .carousel-track {
@@ -546,26 +545,51 @@ footer {
   height: auto;
   display: block;
   object-fit: cover;
+  border-radius: 12px;
+  /* Keep radius on image */
+}
+
+.nav-zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.nav-zone.left {
+  left: 0;
+}
+
+.nav-zone.right {
+  right: 0;
 }
 
 .carousel-dots {
   display: flex;
   justify-content: center;
   margin-top: 15px;
-  gap: 10px;
+  gap: 8px;
+  align-items: center;
+  /* Align dots vertically */
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   background-color: var(--border-color);
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  opacity: 0.6;
 }
 
 .dot.active {
   background-color: var(--accent-color);
+  transform: scale(1.5);
+  /* Make active dot larger */
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
