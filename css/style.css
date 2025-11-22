@@ -224,6 +224,12 @@ footer {
   border: 1px solid var(--border-color);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  /* Remove underline for anchor tags */
+  display: block;
+  /* Ensure it behaves like a block for layout */
+  color: inherit;
+  /* Inherit text color */
 }
 
 .project-card:hover {
