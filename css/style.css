@@ -153,8 +153,10 @@ footer {
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 119, 182, 0.4);
+  /* Glow effect with theme color */
+  border-color: #0077b6;
 }
 
 .project-card i {
