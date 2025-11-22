@@ -72,15 +72,11 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%;
-  /* Moved up to show top of head */
-  transform: scale(1.15);
-  /* Reduced zoom */
   transition: transform 0.3s ease;
 }
 
 .profile-img:hover {
-  transform: scale(1.25) rotate(5deg);
+  transform: scale(1.05) rotate(5deg);
 }
 
 .header-text {
@@ -113,11 +109,6 @@ nav ul {
   /* Ensure ul respects text-align */
   padding: 0;
   margin: 0;
-}
-
-font-size: 1.2rem;
-font-weight: 400;
-opacity: 0.9;
 }
 
 @media (max-width: 768px) {
