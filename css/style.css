@@ -72,11 +72,14 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: rotate(5deg);
+  /* Default rotation */
   transition: transform 0.3s ease;
 }
 
 .profile-img:hover {
-  transform: scale(1.05) rotate(5deg);
+  transform: scale(1.1) rotate(15deg);
+  /* More rotation on hover */
 }
 
 .header-text {
